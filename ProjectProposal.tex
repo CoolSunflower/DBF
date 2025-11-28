@@ -1,0 +1,42 @@
+\title{Practical Evaluation and Extension of Double Binary Factorization}
+\author{DA422 July-Nov 2025 Project Proposal}
+
+\begin{table}[h!]
+\centering
+\caption*{Team Members}
+\begin{tabular}{|c|c|}
+\hline
+\textbf{Name} & \textbf{Roll Number} \\
+\hline
+Abhishek Kumar & 220101002 \\
+Adarsh Gupta & 220101003 \\
+Parv Aggarwal & 220101124 \\
+Kushagra Singh Sisodia & 220102052 \\
+Aditya Vardhini & 220121023 \\
+\hline
+\end{tabular}
+\end{table}
+
+\noindent\textbf{Chosen Base Paper:} \href{https://arxiv.org/pdf/2505.11076}{Addition is almost all you need: Compressing neural networks with double binary factorization}\\
+
+\noindent\textbf{Proposal:} We will work on Double Binary Factorization (DBF), a recently proposed method for compressing neural networks by factorizing dense weight matrices into two binary sign matrices with scaling vectors. DBF reduces memory usage and improves efficiency by replacing multiplications with additions, while maintaining accuracy comparable to state-of-the-art quantization methods.\\
+
+\noindent\textbf{Our project will be divided into four parts:}
+
+1. \textbf{Reproduction:} We will reproduce the authors’ results on smaller open-source models such as OPT-125M. We will evaluate statistical performance using perplexity on Wikitext-2 and accuracy on small reasoning benchmarks.
+
+2. \textbf{Statistical performance analysis:} We will compare compressed vs dense models, reporting metrics such as iterations to convergence (on calibration data), accuracy, and perplexity. This will show how DBF performs in practice on smaller models.
+
+3. \textbf{Hardware performance analysis:} We will benchmark FLOPs/throughput/wall-clock inference time before and after DBF compression. We will also collect basic GPU energy measurements using nvidia-smi to highlight efficiency gains.
+
+4. \textbf{Extension - Non-Uniform Compression:} Instead of using a uniform compression ratio across all layers, we will implement simple heuristics (e.g., scaling ratios based on layer size or input activation norms). The goal is test whether non-uniform compression improves the trade-off between accuracy and efficiency.\\
+
+\noindent\textbf{Expected Outcomes:}
+
+1. A working reproduction of DBF on small models.
+
+2. Statistical comparisons between dense and DBF-compressed models.
+
+3. Hardware measurements (speed, FLOPs, and energy) showing efficiency benefits.
+
+4. An evaluation of non-uniform compression heuristics as an extension.

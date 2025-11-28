@@ -1,0 +1,10 @@
+torch>=2.6.0
+transformers>=4.40.0
+datasets>=2.16.0
+accelerate>=0.26.0
+lm_eval>=0.4.0
+matplotlib
+scipy
+jupyter
+sentencepiece
+protobuf
